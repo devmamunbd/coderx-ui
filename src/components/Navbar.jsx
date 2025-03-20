@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router";
@@ -98,7 +99,7 @@ const Navbar = () => {
           {/* desktop menu */}
           <div className="hidden lg:flex space-x-4 items-center">
             {Object.keys(menuItems).map((key) => (
-              <div className="">
+              <div key={key.title} className="relative">
                 <button
                   className="hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium flex items-center"
                   onClick={() => toggleDropDown(key)}
@@ -110,6 +111,67 @@ const Navbar = () => {
                     }`}
                   />
                 </button>
+                {/* dropdown menu */}
+                {activeDropdown === key && (
+                  <div className="absolute left-0 mt-2 w-screen max-w-md bg-white rounded-md shadow-lg py-2 text-black">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                      {key === "platform" ? (
+                        menuItems[key].sections.map((section, index) => (
+                          <div className="space-y-3 px-4" key={index}>
+                            <h3 className="text-xs font-semibold text-gray-500 tracking-wider mb-2">
+                              {section.title}
+                            </h3>
+                            <div>
+                              {section.items.map((item, itemIdx) => (
+                                <Link
+                                  key={itemIdx}
+                                  to={`/${key}/${item.name.toLowerCase()}`}
+                                  className="group flex items-start  rounded-lg hover:bg-gray-50"
+                                >
+                                  <div className="px-4">
+                                    <p className="text-sm font-medium text-gray-900 flex items-center">
+                                      {item.name}{" "}
+                                      {item.isNew && (
+                                        <span
+                                          className="ml-2 inline-flex items-center
+                                      px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800"
+                                        >
+                                          NEW
+                                        </span>
+                                      )}
+                                    </p>
+                                    <p className="text-sm text-gray-500">
+                                      {item.desc}
+                                    </p>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="space-y-3">
+                          {menuItems[key].items.map((item, index) => (
+                            <Link
+                              key={index}
+                              to={`/${key}/${item.name.toLowerCase()}`}
+                              className="group flex items-start  rounded-lg hover:bg-gray-50"
+                            >
+                              <div className="px-4">
+                                <p className="text-sm font-medium text-gray-900">
+                                  {item.name}
+                                </p>
+                                <p className="text-sm text-gray-500">
+                                  {item.desc}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
             <Link to="/enterprise" className="hover:text-gray-300">
