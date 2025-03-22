@@ -3,6 +3,7 @@ import CompanyLogo from "./components/CompanyLogo";
 import FeaturesSection from "./components/FeaturesSection";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import PricingBox from "./components/PricingBox";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <CompanyLogo />
         <FeaturesSection />
+        <PricingBox />
       </div>
     </>
   );
