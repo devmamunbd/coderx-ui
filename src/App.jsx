@@ -5,6 +5,8 @@ import FeaturesSection from "./components/FeaturesSection";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import PricingBox from "./components/PricingBox";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <FeaturesSection />
         <PricingBox />
         <According />
+        <ContactUs />
+        <Footer />
       </div>
     </>
   );

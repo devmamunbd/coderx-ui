@@ -191,7 +191,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/started"
-              className="hover:text-gray-300 bg-blue-600 px-4 py-2 rounded-md hover:bg-blue-700"
+              className="hover:text-gray-300 bg-green-500 px-4 py-2 rounded-md hover:bg-green-600 transition duration-300"
             >
               Get Started - It's Free
             </Link>
@@ -306,7 +306,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/started"
-              className="block px-3 py-2 ml-3 bg-blue-500 hover:bg-blue-700"
+              className="block px-3 py-2 ml-3 bg-green-500 hover:bg-green-600 transition duration-300 rounded-lg"
             >
               Get Started
             </Link>
