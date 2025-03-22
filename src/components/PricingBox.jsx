@@ -4,14 +4,17 @@ const PricingBox = () => {
   return (
     <div className="bg-black py-16">
       <div className="container mx-auto px-4 sm:px-6">
-        <h2 className="text-xl md:text-2xl font-bold text-white italic text-center mb-5">
+        <h2 className="text-xl md:text-4xl font-bold text-white italic text-center mb-5">
           Pricing Box
         </h2>
 
         {/* pricing-box */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 py-5">
           {/* first-box */}
-          <div className="bg-primary hover:bg-gray-950 transition-all duration-150 ease-in-out cursor-pointer px-4 py-4 border-1 border-white/10 rounded-md">
+          <div
+            data-aos="fade-right"
+            className="bg-primary hover:bg-gray-950 transition-all duration-150 ease-in-out cursor-pointer px-4 py-4 border-1 border-white/10 rounded-md"
+          >
             <h3 className="text-white text-xl md:text-2xl font-bold mb-5">
               💡 Basic Plan
             </h3>
@@ -32,7 +35,10 @@ const PricingBox = () => {
           </div>
 
           {/* second-box */}
-          <div className="bg-primary hover:bg-gray-950 transition-all duration-150 ease-in-out cursor-pointer px-4 py-4 border-1 border-white/10 rounded-md">
+          <div
+            data-aos="zoom-in-up"
+            className="bg-primary hover:bg-gray-950 transition-all duration-150 ease-in-out cursor-pointer px-4 py-4 border-1 border-white/10 rounded-md"
+          >
             <h3 className="text-white text-xl md:text-2xl font-bold mb-5">
               🚀 Standard Plan
             </h3>
@@ -51,7 +57,10 @@ const PricingBox = () => {
           </div>
 
           {/* third-box */}
-          <div className="bg-primary hover:bg-gray-950 transition-all duration-150 ease-in-out cursor-pointer px-4 py-4 border-1 border-white/10 rounded-md">
+          <div
+            data-aos="fade-left"
+            className="bg-primary  hover:bg-gray-950 transition-all duration-150 ease-in-out cursor-pointer px-4 py-4 border-1 border-white/10 rounded-md"
+          >
             <h3 className="text-white text-xl md:text-2xl font-bold mb-5">
               🔥 Premium Plan
             </h3>

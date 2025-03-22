@@ -7,14 +7,14 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-2 sm:px-6 lg:px-8 pt-10 pb-16 relative">
         {/* SubTitle */}
         <div className="mb-6 ">
-          <h4 className="text-[#999999] uppercase tracking-[0.2em] text-sm font-medium">
-            GROWTH YOUR CAREER WITH{" "}
+          <h4 className="text-[#999999] uppercase tracking-[0.2em] text-sm font-medium animate-pulse">
+            GROWTH YOUR CAREER WITH
             <span className="text-green-500">CoderX</span> UI....
           </h4>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-[1.1] tracking-[0.02em]">
+        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-6 leading-[1.1] tracking-[0.02em] ">
           Your Vision, <span className="text-green-500">Our Code</span> –
           Transforming <br /> <span className="text-green-500">Ideas into</span>{" "}
           Reality
